@@ -61,7 +61,7 @@
 
 9. **(0.7) Responsividade:**
 
-    - (0.2) Garanta que a página seja responsiva e não quebre em resoluções menores.
+    - ✅ (0.2) Garanta que a página seja responsiva e não quebre em resoluções menores.
     - ✅ (0.5) Utilize CSS Grid para organizar os campos de filtro em duas colunas em resoluções maiores que 760px e em uma coluna em resoluções menores.
 
 ### Links e Recursos Adicionais

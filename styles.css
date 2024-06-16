@@ -148,6 +148,10 @@ header {
     list-style-type: none;
 }
 
+.news-list li {
+    list-style-type: none;
+}
+
 .news-item {
     display: flex;
     flex-direction: row;
@@ -251,6 +255,14 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+}
+
+.pagination {
+    list-style-type: none;
+}
+
+.pagination li {
+    list-style-type: none;
 }
 
 @media (min-width: 760px) {

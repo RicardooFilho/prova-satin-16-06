@@ -20,7 +20,8 @@ function updateFilterCount() {
     const urlParams = new URLSearchParams(window.location.search);
 
     const filterKeys = Array.from(urlParams.keys())
-        .filter(key => key !== 'page' && key !== 'search-input');
+        .filter(key => key !== 'page' && key !== 'busca');
+
     document.getElementById('filter-count').textContent = filterKeys.length;
 }
 
@@ -35,6 +36,7 @@ function filterNews(event) {
     const fromInput = document.getElementById('from-input').value;
     const toInput = document.getElementById('to-input').value;
     const searchInput = document.getElementById('search-input').value;
+    const page = document.getElementById('pagination-button').value
 
     if (typeInput) {
         params.append('tipo', typeInput);
@@ -114,6 +116,9 @@ function getNews(page = 1) {
     }
 
     params.append('page', page);
+
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.history.pushState({}, '', newUrl);
 
     const list = document.getElementById('news-list');
     list.innerHTML = '';
@@ -222,6 +227,7 @@ function renderPagination() {
     for (let i = start; i <= end; i++) {
         const li = document.createElement('li');
         const button = document.createElement('button');
+        button.id = 'pagination-button';
         button.textContent = i;
         button.onclick = () => {
             getNews(i);
@@ -240,5 +246,3 @@ document.addEventListener("DOMContentLoaded", function () {
    setFilterValuesFromQueryString();
    getNews();
 });
-
-//finalizado
