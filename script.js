@@ -118,7 +118,7 @@ function getNews(page = 1) {
     const list = document.getElementById('news-list');
     list.innerHTML = '';
 
-    fetch(`http://servicodados.ibge.gov.br/api/v3/noticias?${params.toString()}`)
+    fetch(`https://servicodados.ibge.gov.br/api/v3/noticias?${params.toString()}`)
         .then((response) => response.json())
         .then((data) => {
             if (data?.items?.length > 0) {
