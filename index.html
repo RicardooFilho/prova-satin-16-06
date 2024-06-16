@@ -12,7 +12,7 @@
 <header>
     <h1 class="h1-header">Portal de Notícias do IBGE</h1>
 
-    <form name="researcher" class="researcher" onsubmit="searchNews(event)">
+    <form name="researcher" class="researcher" onsubmit="getNews()">
 
         <input type="text" name="search-input" id="search-input" class="search-input" placeholder="Buscar notícia por termo">
 
@@ -26,8 +26,8 @@
 </header>
 
 <main>
-    <ul id="news-list" class="news-list">
-    </ul>
+    <ul id="news-list" class="news-list"></ul>
+    <ul id="pagination" class="pagination"></ul>
 </main>
 
 <footer>

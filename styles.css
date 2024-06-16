@@ -6,7 +6,7 @@
 
 body {
     display: grid;
-    grid-template-rows: 200px 8fr 200px;
+    grid-template-rows: 200px 1fr 200px;
     min-height: 100vh;
 }
 
@@ -216,6 +216,43 @@ header {
     width: 100%;
 }
 
-.news-button:hover {
-    background-color: #0056b3;
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination button[style*="background-color: #4682b4"] {
+    color: #fff;
+    cursor: default;
+}
+
+.filter-dialog .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 760px) {
+    .filter-dialog .form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

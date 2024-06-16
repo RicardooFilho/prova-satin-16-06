@@ -50,10 +50,10 @@
 
 7. **(0.7) Botoes de Paginacao no Final das Noticias em uma `<ul> <li>`:**
 
-    - (0.1) Crie botões de paginação no final das notícias utilizando elementos `<button>` dentro de `<ul>` `<li>`.
-    - (0.25) Implemente a lógica para mostrar no máximo 10 botões de páginas. Sempre mostrando a página atual no meio. Ex: Caso o usuário esteja na página 10, mostre as páginas 5, 6, 7, 8, 9, 10, 11, 12, 13, 14. Mesmo comportamento do [site do IBGE](https://agenciadenoticias.ibge.gov.br/agencia-noticias.html)
-    - (0.1) Indique visualmente a página atual com uma cor de fundo `#4682b4`.
-    - (0.25) Atualizar a querystring da página ao clicar em um botão de paginação. Também carregar novos dados da API com base na página selecionada.
+    - ✅ (0.1) Crie botões de paginação no final das notícias utilizando elementos `<button>` dentro de `<ul>` `<li>`.
+    - ✅ (0.25) Implemente a lógica para mostrar no máximo 10 botões de páginas. Sempre mostrando a página atual no meio. Ex: Caso o usuário esteja na página 10, mostre as páginas 5, 6, 7, 8, 9, 10, 11, 12, 13, 14. Mesmo comportamento do [site do IBGE](https://agenciadenoticias.ibge.gov.br/agencia-noticias.html)
+    - ✅ (0.1) Indique visualmente a página atual com uma cor de fundo `#4682b4`.
+    - ✅ (0.25) Atualizar a querystring da página ao clicar em um botão de paginação. Também carregar novos dados da API com base na página selecionada.
 
 8. **(0.1) Remover Todos os Bullet Points de `<ul> <li>`:**
 
@@ -62,7 +62,7 @@
 9. **(0.7) Responsividade:**
 
     - (0.2) Garanta que a página seja responsiva e não quebre em resoluções menores.
-    - (0.5) Utilize CSS Grid para organizar os campos de filtro em duas colunas em resoluções maiores que 760px e em uma coluna em resoluções menores.
+    - ✅ (0.5) Utilize CSS Grid para organizar os campos de filtro em duas colunas em resoluções maiores que 760px e em uma coluna em resoluções menores.
 
 ### Links e Recursos Adicionais
 

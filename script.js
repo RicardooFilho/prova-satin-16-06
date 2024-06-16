@@ -1,3 +1,6 @@
+let currentPage = 1;
+let totalPages = 1;
+
 function openFilterDialog() {
 
     const dialog = document.getElementById('filter-dialog');
@@ -79,7 +82,9 @@ function setFilterValuesFromQueryString() {
     }
 }
 
-function getNews() {
+function getNews(page = 1) {
+
+    currentPage = page;
 
     const params = new URLSearchParams();
 
@@ -107,6 +112,8 @@ function getNews() {
     if (searchInput) {
         params.append('busca', searchInput);
     }
+
+    params.append('page', page);
 
     const list = document.getElementById('news-list');
     list.innerHTML = '';
@@ -188,8 +195,44 @@ function getNews() {
 
                     list.appendChild(li);
                 });
+
+                totalPages = data.totalPages;
+                renderPagination();
             }
         });
+}
+
+function renderPagination() {
+    const pagination = document.getElementById('pagination');
+    pagination.innerHTML = '';
+
+    const maxButtons = 10;
+    const half = Math.floor(maxButtons / 2);
+    let start = Math.max(currentPage - half, 1);
+    let end = Math.min(currentPage + half, totalPages);
+
+    if (currentPage - half < 1) {
+        end = Math.min(end + (half - currentPage + 1), totalPages);
+    }
+
+    if (currentPage + half > totalPages) {
+        start = Math.max(start - (currentPage + half - totalPages), 1);
+    }
+
+    for (let i = start; i <= end; i++) {
+        const li = document.createElement('li');
+        const button = document.createElement('button');
+        button.textContent = i;
+        button.onclick = () => {
+            getNews(i);
+        };
+        if (i === currentPage) {
+            button.style.backgroundColor = '#4682b4';
+            button.style.color = '#fff';
+        }
+        li.appendChild(button);
+        pagination.appendChild(li);
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
