@@ -18,8 +18,8 @@
     - ✅ (0.1) Utilize a tag `<svg>` com o código SVG fornecido para criar o ícone de filtro.
     - ✅ (0.1) Alinhe o ícone de filtro à direita do header.
     - ✅ (0.1) O ícone deve ser clicável e abrir um modal (`<dialog>`) com os filtros. Adicionar cursor pointer.
-    - (1) Exiba o número de filtros ativos, baseado na query string, ao lado do ícone de filtro (não contar page e busca). Alinhe com `position: absolute`.
-    - (0.35) Caso exista filtros na querystring, eles deverão ser aplicados nos inputs. Ex: url.com?busca=IBGE, o input de busca deverá ter o value "IBGE"
+    - ✅ Exiba o número de filtros ativos, baseado na query string, ao lado do ícone de filtro (não contar page e busca). Alinhe com `position: absolute`.
+    - ✅ Caso exista filtros na querystring, eles deverão ser aplicados nos inputs. Ex: url.com?busca=IBGE, o input de busca deverá ter o value "IBGE"
 
 4. **(2.85) Filtros em um Dialog HTML:**
 
@@ -28,25 +28,25 @@
     - ✅ (0.25) Os filtros deverão ficar em um form.
     - ✅ (0.25) Inicie sempre a quantidade com 10, e as options sendo múltiplos de 5.
     - ✅ (0.25) Adiciona um ícone de "X" no canto superior direito do modal para fechá-lo.
-    - 📝 (0.25) Adicione um botão "Aplicar" para aplicar os filtros e fechar o modal.
-    - (1) Ao aplicar, os filtros devem ser refletidos na URL da página, com query string, e os dados devem ser atualizados (nova chamada na API).
+    - ✅ (0.25) Adicione um botão "Aplicar" para aplicar os filtros e fechar o modal.
+    - ✅ (1) Ao aplicar, os filtros devem ser refletidos na URL da página, com query string, e os dados devem ser atualizados (nova chamada na API).
 
 5. **(1.5) Buscar as Notícias da API do IBGE:**
 
-    - (0.15) Utilize a API http://servicodados.ibge.gov.br/api/v3/noticias para buscar as notícias.
+    - ✅ (0.15) Utilize a API http://servicodados.ibge.gov.br/api/v3/noticias para buscar as notícias.
     - ✅ (0.25) Utilize a documentação https://servicodados.ibge.gov.br/api/docs/noticias?versao=3, atualize o input de "Tipo" para os valores possíveis.
-    - 📝 (0.1) Por padrão, busque somente 10 notícias.
-    - (1) A api deve ser chamada com os filtros da query string, filtrados pelo usuário.
+    - ✅ (0.1) Por padrão, busque somente 10 notícias.
+    - ✅ (1) A api deve ser chamada com os filtros da query string, filtrados pelo usuário.
 
 6. **(1.3) Listar as Notícias Dentro de uma `<ul> <li>`:**
 
-    - (0.25) Após obter os dados das notícias da API, itere sobre esses dados e crie elementos `<li>` para cada notícia.
-    - (0.1) Liste esses elementos dentro de uma `<ul>`.
-    - (0.1) Cada notícia deve conter a imagem da noticia, o título em um h2, introdução em um parágrafo.
-    - (0.3) A imagem fica em um objeto stringified, e precisa ser concatenada com a url de noticias do IBGE `https://agenciadenoticias.ibge.gov.br/`
-    - (0.2) Mostrar as editorias da notícia com prefixo `#`.
-    - (0.25) Mostrar a quanto tempo a notícia foi publicada, com base na data de publicação. Ex possíveis: "Publicado há 2 dias", "Publicado hoje", "Publicado ontem".
-    - (0.1) Adicione um botão "Leia Mais" ao final de cada notícia, que ao ser clicado, abre a página da notícia no site do IBGE, em uma nova aba.
+    - ✅ (0.25) Após obter os dados das notícias da API, itere sobre esses dados e crie elementos `<li>` para cada notícia.
+    - ✅ (0.1) Liste esses elementos dentro de uma `<ul>`.
+    - ✅ (0.1) Cada notícia deve conter a imagem da noticia, o título em um h2, introdução em um parágrafo.
+    - ✅ (0.3) A imagem fica em um objeto stringified, e precisa ser concatenada com a url de noticias do IBGE `https://agenciadenoticias.ibge.gov.br/`
+    - ✅ (0.2) Mostrar as editorias da notícia com prefixo `#`.
+    - ✅ (0.25) Mostrar a quanto tempo a notícia foi publicada, com base na data de publicação. Ex possíveis: "Publicado há 2 dias", "Publicado hoje", "Publicado ontem".
+    - ✅ (0.1) Adicione um botão "Leia Mais" ao final de cada notícia, que ao ser clicado, abre a página da notícia no site do IBGE, em uma nova aba.
 
 7. **(0.7) Botoes de Paginacao no Final das Noticias em uma `<ul> <li>`:**
 
@@ -57,7 +57,7 @@
 
 8. **(0.1) Remover Todos os Bullet Points de `<ul> <li>`:**
 
-    - (0.1) Utilize CSS para remover os bullet points padrão de listas não ordenadas (`<ul>`).
+    - ✅ (0.1) Utilize CSS para remover os bullet points padrão de listas não ordenadas (`<ul>`).
 
 9. **(0.7) Responsividade:**
 

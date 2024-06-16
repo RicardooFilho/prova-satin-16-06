@@ -6,7 +6,7 @@
 
 body {
     display: grid;
-    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-rows: 200px 8fr 200px;
     min-height: 100vh;
 }
 
@@ -15,7 +15,6 @@ header, footer {
 }
 
 main {
-    background-color: #f0f0f0;
     max-width: 100ch;
     margin: 0 auto;
     padding: 1rem;
@@ -58,11 +57,27 @@ header {
     background: none;
 }
 
+.filter-container {
+    position: relative;
+    display: inline-block;
+}
+
 .filter-svg {
     position: absolute;
-    right: 10px;
-    top: 60%;
+    right: 20px;
+    top: 65%;
     cursor: pointer;
+}
+
+.filter-count {
+    position: absolute;
+    top: 70%;
+    right: 8px;
+    background-color: white;
+    color: #4682b4;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
 }
 
 .filter-dialog {
@@ -76,11 +91,19 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: white;
     position: relative;
 }
 
 .filter-dialog .form-group {
     margin-bottom: 1rem;
+    flex: 1;
+}
+
+.filter-dialog .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .filter-dialog label {
@@ -114,10 +137,85 @@ header {
     background: none;
     border: none;
     font-weight: bold;
-    /*font-size: 30px;*/
     font-size: 1.5rem;
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
+}
+
+.news-list {
+    list-style-type: none;
+}
+
+.news-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.news-image {
+    width: 200px;
+    object-fit: cover;
+    border-right: 1px solid #ddd;
+}
+
+.news-text-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 15px;
+}
+
+.news-title {
+    font-size: 1.3em;
+    margin: 0 0 10px 0;
+}
+
+.news-intro {
+    margin: 10px 0;
+}
+
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.news-date {
+    font-size: 0.9em;
+}
+
+.news-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.news-tags span {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+.news-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-start;
+    text-align: center;
+    width: 100%;
+}
+
+.news-button:hover {
+    background-color: #0056b3;
 }
