@@ -230,18 +230,20 @@ header {
 
 .pagination button {
     padding: 8px 12px;
-    border: 1px solid #ddd;
+    border: 1px solid #4682b4;
     border-radius: 5px;
     background-color: #fff;
     cursor: pointer;
+    color: #4682b4;
 }
 
 .pagination button:hover {
-    background-color: #f0f0f0;
+    background-color: #4682b4;
+    color: white;
 }
 
 .pagination button[style*="background-color: #4682b4"] {
-    color: #fff;
+    color: #4682b4;
     cursor: default;
 }
 
