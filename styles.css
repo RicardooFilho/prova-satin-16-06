@@ -265,6 +265,16 @@ header {
     list-style-type: none;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    color: white;
+}
+
 @media (min-width: 760px) {
     .filter-dialog .form-row {
         grid-template-columns: repeat(2, 1fr);

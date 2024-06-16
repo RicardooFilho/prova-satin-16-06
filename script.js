@@ -208,20 +208,19 @@ function getNews(page = 1) {
 }
 
 function renderPagination() {
+
     const pagination = document.getElementById('pagination');
     pagination.innerHTML = '';
 
     const maxButtons = 10;
     const half = Math.floor(maxButtons / 2);
+
     let start = Math.max(currentPage - half, 1);
-    let end = Math.min(currentPage + half, totalPages);
+    let end = start + maxButtons - 1;
 
-    if (currentPage - half < 1) {
-        end = Math.min(end + (half - currentPage + 1), totalPages);
-    }
-
-    if (currentPage + half > totalPages) {
-        start = Math.max(start - (currentPage + half - totalPages), 1);
+    if (end > totalPages) {
+        end = totalPages;
+        start = Math.max(end - maxButtons + 1, 1);
     }
 
     for (let i = start; i <= end; i++) {
